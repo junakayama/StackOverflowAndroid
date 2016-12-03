@@ -9,4 +9,9 @@ public class Item {
     public int count;
     public String name;
 
+    public String getName() { return name;}
+    public String toString() {
+        return name+"                                            "+count;
+    }
+
 }
