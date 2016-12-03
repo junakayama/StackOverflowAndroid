@@ -12,8 +12,9 @@ public interface StackOverflowService {
 
     public static String BASE_URL = "https://api.stackexchange.com/2.2/";
 
-    @GET("tags/{tags}/info?order=desc&sort=popular&site=stackoverflow")
-    Call<TagsList> listTags(@Path("tags") String tag);
+    @GET("tags/android/related?site=stackoverflow")
+    Call<TagsList> listTags();
 
-
+    @GET("tags/{tags}/faq?pagesize=20&site=stackoverflow")
+    Call<QuestionsList> listQuestions(@Path("tags") String tag);
 }

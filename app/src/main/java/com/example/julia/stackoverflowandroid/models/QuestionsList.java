@@ -3,10 +3,9 @@ package com.example.julia.stackoverflowandroid.models;
 import java.util.List;
 
 /**
- * Created by julia on 01/12/16.
+ * Created by julia on 03/12/16.
  */
 
-public class TagsList {
-
-    public List<Tag> items;
+public class QuestionsList {
+    List<Question> items;
 }
