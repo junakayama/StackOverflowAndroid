@@ -8,9 +8,33 @@ import java.util.List;
 
 public class Question {
     public String title;
-//    public List<Owner> owner;
+    public Owner owner;
     public int score;
     public String toString() {
         return title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }

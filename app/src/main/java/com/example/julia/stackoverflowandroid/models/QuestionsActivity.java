@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -63,6 +65,24 @@ public class QuestionsActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<QuestionsList> call, Throwable t) {
                 Log.e(TAG,"Erro:" + t.getMessage());
+            }
+        });
+
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Question question = (Question)lista.getItemAtPosition(i);
+                String url = question.getOwner().getProfile_image();
+                String title = question.getTitle();
+                String user = question.getOwner().getDisplay_name();
+                String score = String.valueOf(question.getScore());
+                Intent intent = new Intent(QuestionsActivity.this,TesteActivity.class);
+                intent.putExtra("url", url);
+                intent.putExtra("title", title);
+                intent.putExtra("user", user);
+                intent.putExtra("score", score);
+
+                startActivity(intent);
             }
         });
     }
