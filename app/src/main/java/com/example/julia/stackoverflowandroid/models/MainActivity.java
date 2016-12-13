@@ -1,7 +1,6 @@
 package com.example.julia.stackoverflowandroid.models;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +11,6 @@ import android.widget.ListView;
 
 import com.example.julia.stackoverflowandroid.R;
 
-import java.io.Serializable;
 import java.util.List;
 
 import retrofit2.Call;
